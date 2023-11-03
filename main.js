@@ -1,9 +1,23 @@
+
+
 const shoppingList = [ "Milk", "Eggs", "Rice", "Pasta", "Meat", "Water", "Coffee", "Pesto", "Fruits", "Onions"]
 
 
-let items = 0
+const shoppingBag = document.createElement("div")
+document.body.append(shoppingBag)
+
+const unorderedList = document.createElement("ul")
+shoppingBag.appendChild(unorderedList)
+
+
+let items = 0;
 while(items < shoppingList.length){
-    console.log(shoppingList[items]);
+    const listItems = document.createElement("li");
+    unorderedList.appendChild(listItems);
+    listItems.append(shoppingList[items]);
     items++;
+    
 }
+
+
 
